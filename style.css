@@ -1,0 +1,68 @@
+html { 		
+
+	}
+
+body {
+	
+ 	 	background-color: black;
+	}
+	
+	
+#background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url('images/background_dots.png'); 
+	opacity: 0.2;
+    background-repeat: repeat;
+    background-size: 90%;
+}
+
+#map {
+	height: 700px;
+    width: auto;
+    position: absolute;
+	top: 50px;
+	left: 200px;
+    vertical-align: center; 
+	/*max-height: 800px;
+    max-width: auto;
+    height: 90%;*/
+}
+
+.airport_icons {
+	width: 30px;
+    height: 30px;
+    background-color: #1d626c;
+    border-radius: 25px; 
+    opacity: 0.6;
+}
+
+#jfk_icon {
+	position: absolute;
+	top: 300px;
+	left: 1120px;
+}
+
+#las_icon {
+	position: absolute;
+	top: 250px;
+	left: 250px;
+
+}
+
+#lax_icon {
+	position: absolute;
+	top: 430px;
+	left: 430px;
+
+}
+
+#pdx_icon {
+	position: absolute;
+	top: 500px;
+	left: 380px;
+
+}
