@@ -22,25 +22,31 @@ body {
 
 
 #prompt {
+	margin-top: -75px;
 	color: white;
-	font-family: "Marketing Script", Helvetica, Sans-serif;
-	font-size: 80pt;
-	color: yellow;
-	opacity: 0.5;
+	font-family: "Zapfino", Helvetica, Sans-serif;
+	font-size: 50pt;
+	color: #fff;
+	opacity: 0.4;
 	text-align: center;
 }
 
-#input_form {
+#content_wrapper {
 	width: 400px;
-	height: 100px;
+	height: 500px;
 	position: absolute;
 	top: 150px;
 	left:520px;
 }
 
+#input_form {
+	width: 400px;
+	height: 70px;
+}
+
 .from_to_box {
 	width: 100%;
-	height: 70%;
+	height: 100%;
 	background: white;
 	border: 2px solid #333333;
 	border-radius: 10px;
@@ -75,10 +81,7 @@ body {
 
 #warning_wrapper {
 	width: 400px;
-	height: 100px;
-	position: absolute;
-	top: 220px;
-	left:520px;
+	height: 30px;
 }
 
 .invalid_warning {
@@ -91,10 +94,28 @@ body {
 	opacity: 0.7;
 }
 
-#distance_display {
+#distance_wrapper {
+	width: 100%;
 	color: white;
-	font-size: 60pt;
+	font-family: "Futura", Helvetica, Sans-Serif;
+   	font-stretch: condensed;
+	font-weight: medium;
+	margin-top: -30px;
+}
+
+#distance_display {
+	width: 100%;
+	text-align: center;
+	font-size: 160pt;
 	position: absolute;
+}
+
+#miles {
+	font-family: "Futura", Helvetica, Sans-Serif;
+   	font-stretch: condensed;
+	font-weight: medium;
+	font-size: 20pt;
+	display: inline;
 }
 
 input {
@@ -186,23 +207,23 @@ input:-ms-input-placeholder {
 	visibility: visible;
 }
 
-#las_icon {
+#lax_icon {
 	position: absolute;
 	top: 570px;
 	left: 390px;
 }
 
-#las_icon:hover #las_text {
+#lax_icon:hover #las_text {
 	visibility: visible;
 }
 
-#lax_icon {
+#las_icon {
 	position: absolute;
 	top: 500px;
 	left: 440px;
 }
 
-#lax_icon:hover #lax_text {
+#las_icon:hover #lax_text {
 	visibility: visible;
 }
 

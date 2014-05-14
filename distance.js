@@ -62,6 +62,7 @@ function checkinput(box) {
 			document.getElementById("invalid_" + box).style.visibility = "visible";
 			return;
 		}
+		document.getElementById("invalid_" + box).style.visibility = "hidden";
 		if (box === "from_box") {
 			isfilled_from = 1;
 			if (from_text == "" || from_text == NULL) {
@@ -75,8 +76,21 @@ function checkinput(box) {
 			turnonicon(text);
 		}
 		displayairportdistance();
+	} else if (text.length == 0) {
+		if (box === "from_box") {
+			isfilled_from = 0;
+		} else isfilled_to = 0;
+		document.getElementById("invalid_" + box).style.visibility = "hidden";
 	} else {
-		
+		if (box === "from_box") {
+			isfilled_from = 0;
+			turnofficon(from_text);
+			from_text = "";
+		} else {
+			isfilled_to = 0;
+			turnofficon(to_text);
+			to_text = "";
+		}
 	}
 }
 
@@ -98,7 +112,14 @@ function clearinput(box) {
 
 function displayairportdistance() {
 	if (isfilled_from && isfilled_to) {
-		document.getElementById("distance_display").innerHTML = IntentMedia.Distances.distance_between_airports(from_text, to_text);
+		var distance = IntentMedia.Distances.distance_between_airports(from_text, to_text);
+		if (distance > 0) {
+			var miles = document.createElement('div');
+			miles.setAttribute("id", "miles");
+			miles.innerHTML = "miles";
+			document.getElementById("distance_display").innerHTML = distance;
+			document.getElementById("distance_display").appendChild(miles);
+		} else document.getElementById("distance_display").innerHTML = "";
 	} else document.getElementById("distance_display").innerHTML = "";
 }
 
