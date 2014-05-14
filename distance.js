@@ -1,14 +1,12 @@
-var isfilled_from;
-var isfilled_to;
+var isfilled_from = 0;
+var isfilled_to = 0;
 var jfk_cl = las_cl = lax_cl = pdx_cl = 0;
-var from_text, to_text;
+var from_text = "";
+var to_text = "";
 
 function clickicon(airport) {
 
 	//toggleicon(airport);
-
-	isfilled_from = 0;
-	isfilled_to = 0;
 
 	var from_form = document.getElementById("from_box");
 	var to_form = document.getElementById("to_box");
@@ -25,50 +23,89 @@ function clickicon(airport) {
 		turnofficon(from_text);
 		turnofficon(to_text);
 		turnonicon(airport);
-		from_form.value = airport;
-		to_form.value = "";
+		from_text = airport;
+		to_text = "";
 	} else if (isfilled_from) {
 		if (airport != from_text) {
-			to_form.value = airport;
 			isfilled_to = 1;
 			turnonicon(airport);
+			to_text = airport;		
 		} 
 	} else if (isfilled_to) {
 		if (airport != to_text) {
-			from_form.value = airport;
 			isfilled_from = 1;
 			turnonicon(airport);
+			from_text = airport;
 		}
 	} else if (!isfilled_from && !isfilled_to) {
-		from_form.value = airport;
 		isfilled_from = 1;
 		turnonicon(airport);
+		from_text = airport;
+		to_text = "";
 	}
+
+	from_form.value = from_text;
+	to_form.value = to_text;
+	from_text = from_text.toUpperCase();
+	to_text = to_text.toUpperCase();
+
+	displayairportdistance()
 }
 
 function checkinput(box) {
+	//turnofficon(from_text);
 	var input_box = document.getElementById(box);
 	var text = input_box.value;
-	if (text.length == 3) { 
-		if (!IntentMedia.Airports.airport_exists(text)) return;
+	if (text.length == 3) {
+		text = text.toUpperCase(); 
+		if (!IntentMedia.Airports.airport_exists(text)) {
+			document.getElementById("invalid_" + box).style.visibility = "visible";
+			return;
+		}
 		if (box === "from_box") {
 			isfilled_from = 1;
-			isfilled_to = 1;
+			if (from_text == "" || from_text == NULL) {
+				
+			}
 			from_text = text;
+			turnonicon(text);
 		} else {
 			isfilled_to = 1;
 			to_text = text;
+			turnonicon(text);
 		}
-		if (isfilled_from && isfilled_to) {
-			displayairportdistance();
-		}
+		displayairportdistance();
+	} else {
+		
+	}
+}
+
+function clearinput(box) {
+	document.getElementById(box).value = "";
+	document.getElementById("invalid_" + box).style.visibility = "hidden";
+	if (box === "from_box") {
+		turnofficon(from_text);
+		from_text = "";
+		isfilled_from = 0;
+		displayairportdistance();
+	} else {
+		turnofficon(to_text);
+		to_text = "";
+		isfilled_to = 0;
+		displayairportdistance();
 	}
 }
 
 function displayairportdistance() {
-	window.alert(IntentMedia.Distances.distance_between_airports(from_text, "LAX"));
+	if (isfilled_from && isfilled_to) {
+		document.getElementById("distance_display").innerHTML = IntentMedia.Distances.distance_between_airports(from_text, to_text);
+	} else document.getElementById("distance_display").innerHTML = "";
 }
 
+function turnofficons()	{
+	turnofficon(document.getElementById("from_box").value);
+	turnofficon(document.getElementById("to_box").value);
+}
 
 function toggleicon(airport) {
 	switch (airport) {
@@ -116,6 +153,7 @@ function toggleicon(airport) {
 
 function turnonicon(airport_code) {
 	var icon, text;
+	airport_code = airport_code.toLowerCase();
 	icon = document.getElementById(airport_code + "_icon");
 	text = document.getElementById(airport_code + "_text");
 	icon.style.width = "35px";
@@ -127,6 +165,7 @@ function turnonicon(airport_code) {
 
 function turnofficon(airport_code) {
 	var icon, text;
+	airport_code = airport_code.toLowerCase();
 	icon = document.getElementById(airport_code + "_icon");
 	text = document.getElementById(airport_code + "_text");
 	icon.style.width = "25px";

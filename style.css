@@ -21,6 +21,15 @@ body {
 }
 
 
+#prompt {
+	color: white;
+	font-family: "Marketing Script", Helvetica, Sans-serif;
+	font-size: 80pt;
+	color: yellow;
+	opacity: 0.5;
+	text-align: center;
+}
+
 #input_form {
 	width: 400px;
 	height: 100px;
@@ -52,22 +61,41 @@ body {
 	float: right;
 }
 
-#invalid_from {
+#invalid_from_box {
 	visibility: hidden;
+	float: left;
+	text-align: center;
 }
 
-#invalid_to {
+#invalid_to_box {
 	visibility: hidden;
+	float: right;
+	text-align: center;
+}
+
+#warning_wrapper {
+	width: 400px;
+	height: 100px;
+	position: absolute;
+	top: 220px;
+	left:520px;
 }
 
 .invalid_warning {
+	position: inline;
 	color: white;
 	font-family: "Futura", Helvetica, Sans-Serif;
 	font-size: 10pt;
+	width: 35%;
 	text-align: center;
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
+#distance_display {
+	color: white;
+	font-size: 60pt;
+	position: absolute;
+}
 
 input {
 	font-family: "Futura", Helvetica, Sans-Serif;
