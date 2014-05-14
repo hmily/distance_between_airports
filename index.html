@@ -4,18 +4,34 @@
 <title>Airport Distance -M.J Ma</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript" src="flights.js"></script>
+<script type="text/javascript" src="distance.js"></script>
 <script language="javascript" type="text/javascript" src="jquery-1.8.3.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
- <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 
   <body>
   <div id="background"></div>
-  	<div><img id="map" src="images/background_map.png"></img>
-  	<div id="jfk_icon" class="airport_icons"></div>
-  	<div id="las_icon" class="airport_icons"></div>
-  	<div id="lax_icon" class="airport_icons"></div>
-  	<div id="pdx_icon" class="airport_icons"></div>
+
+  
+  	<div><img id="map" src="images/background_map-01.png"></img>
+  		<div id="jfk_icon" class="airport_icons" onmouseover="showicontext('jfk');" onclick="clickicon('jfk');" ><p id="jfk_text" class="icon_text">JFK</p></div>
+  		<div id="las_icon" class="airport_icons" onmouseover="showicontext('las');" onclick="clickicon('las');"><p id="las_text" class="icon_text">LAS</p></div>
+  		<div id="lax_icon" class="airport_icons" onmouseover="showicontext('lax');" onclick="clickicon('lax');"><p id="lax_text" class="icon_text">LAX</p></div>
+  		<div id="pdx_icon" class="airport_icons" onmouseover="showicontext('pdx');" onclick="clickicon('pdx');"><p id="pdx_text" class="icon_text">PDX</p></div>
   	</div>
+
+  <div id="input_form">
+  <div id="from_wrapper" class="input_wrapper">
+  <input id="from_box" class="from_to_box" type="text" 
+  placeholder="FROM" name="from_box" maxlength="3" autocomplete="off" onkeydown="checkinput('from_box');"></input>
+  <p id="invalid_from" class="invalid_warning">Invalid airport code</p>
+  </div>
+  
+  <div id="to_wrapper" class="input_wrapper">
+  <input id="to_box" class="from_to_box" type="text" 
+  placeholder="TO" name="to_box" maxlength="3" autocomplete="off"></input>  
+  <p id="invalid_to" class="invalid_warning">Invalid airport code</p>
+  </div>
+  
+  </div> //input_form
 
   
   
