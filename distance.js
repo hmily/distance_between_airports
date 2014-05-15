@@ -38,17 +38,13 @@ function clickicon(airport) {
 		from_text = airport;
 		to_text = "";
 	} else if (isfilled_from) {
-		if (airport != from_text) {
-			isfilled_to = 1;
-			turnonicon(airport);
-			to_text = airport;		
-		} 
+		isfilled_to = 1;
+		turnonicon(airport);
+		to_text = airport;		
 	} else if (isfilled_to) {
-		if (airport != to_text) {
-			isfilled_from = 1;
-			turnonicon(airport);
-			from_text = airport;
-		}
+		isfilled_from = 1;
+		turnonicon(airport);
+		from_text = airport;
 	} else if (!isfilled_from && !isfilled_to) {
 		isfilled_from = 1;
 		turnonicon(airport);
@@ -93,10 +89,16 @@ function checkinput(box) {
 		document.getElementById("invalid_" + box).style.visibility = "hidden";
 	} else {
 		if (box === "from_box") {
+			nodisplay();
+			brightenbackground();
+			turnoffpath();
 			isfilled_from = 0;
 			turnofficon(from_text);
 			from_text = "";
 		} else {
+			nodisplay();
+			brightenbackground();
+			turnoffpath();
 			isfilled_to = 0;
 			turnofficon(to_text);
 			to_text = "";
@@ -133,8 +135,12 @@ function displayairportdistance() {
 			document.getElementById("distance_display").appendChild(miles);
 			turnonpath();
 			dimbackground();
-		} else document.getElementById("distance_display").innerHTML = "";
-	} else document.getElementById("distance_display").innerHTML = "";
+		} else nodisplay();
+	} else nodisplay();
+}
+
+function nodisplay() {
+	document.getElementById("distance_display").innerHTML = "";
 }
 
 function turnonpath() {
@@ -144,7 +150,7 @@ function turnonpath() {
 }
 
 function turnoffpath() {
-	if (from_text != "" && to_text != "") {
+	if (from_text != "" && to_text != "" & from_text != to_text) {
 		var path_id = from_text + "_" + to_text;
 		path_id = path_id.toLowerCase();
 		document.getElementById(path_id).style.visibility = "hidden";
