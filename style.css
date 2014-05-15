@@ -20,7 +20,6 @@ body {
     z-index: -1;
 }
 
-
 #prompt {
 	margin-top: -75px;
 	color: white;
@@ -35,8 +34,22 @@ body {
 	width: 400px;
 	height: 500px;
 	position: absolute;
-	top: 150px;
+	top: 200px;
 	left:520px;
+}
+
+#path_wrapper {
+		position:absolute;
+	top:0;
+	left: 520;
+	float: left;
+	z-index: 2;
+}
+
+.paths {
+	position:absolute;
+	top:0;
+	z-index: 2;
 }
 
 #input_form {
@@ -101,6 +114,7 @@ body {
    	font-stretch: condensed;
 	font-weight: medium;
 	margin-top: -30px;
+	opacity: 0.85;
 }
 
 #distance_display {

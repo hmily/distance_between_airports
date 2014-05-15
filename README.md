@@ -1,41 +1,24 @@
-# Overview
+Author: M.J Ma
 
-Implement and design a single-page application that calculates and displays, given user input, the distance between two airports.
+Input:
+	There are two ways to input airport code - enter text in the text field or click on the icons.
+	Clicking on the text fields clears entry.
+	Clicking on icons automatically fills text fields.
 
-# Requirements
+Validation:
+	Invalid airport codes will be detected.
 
-- You are only required to use the following airport codes - JFK, LAX, LAS, PDX
-- Use best practice (HTML/CSS/Javascript)
-- jQuery is acceptable
+Style:
+	Hovering over icons displays airport code.
+	Background dims when displaying distance.
+	
+Browser Compatibility:
+	Best viewing in Firefox.
+	Fonts not rendering perfectly in Chrome or Safari.
+	
+Future Improvements:
+	Lines can be drawn between selected airports.
+	Animation can be implemented on distance display - i.e rolling number.
 
-# Bonuses
-
-- Mockups - preferrable in PSD format
-- Think outside the norm - surprise us!
-
-# Tools provided
-
-You have at your disposal two Javascript functions - `IntentMedia.Distances.distance_between_airports` - which takes two, three letter airport codes as arguments, and `IntentMedia.Airports.airport_exists` which takes one, three letter airport code. 
-
-An example usage of the `distance_between_airports` function is:
-
-```javascript
-> IntentMedia.Distances.distance_between_airports("JFK", "LAX")
-2475
-
-> IntentMedia.Distances.distance_between_airports("JFK", "JFK")
-0
-
-> IntentMedia.Distances.distance_between_airports("JFK", "NON")
--1
-```
-
-An example usage of the `airport_exists` function is:
-
-```javascript
-> IntentMedia.Airports.airport_exists("JFK")
-true
-
-> IntentMedia.Airports.airport_exists("NON")
-false
-```
+Scalability:
+	More airport can be easily added to the map and database.

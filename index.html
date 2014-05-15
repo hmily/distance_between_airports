@@ -16,32 +16,28 @@
   		<div id="las_icon" class="airport_icons" onmouseover="showicontext('las');" onclick="clickicon('las');"><p id="las_text" class="icon_text">LAS</p></div>
   		<div id="pdx_icon" class="airport_icons" onmouseover="showicontext('pdx');" onclick="clickicon('pdx');"><p id="pdx_text" class="icon_text">PDX</p></div>
   	</div>
-
+  	
 	<div id="prompt"><img src="images/prompt.png"></img></div>
 
-<div id="content_wrapper">
-  <div id="input_form">
-  <div id="from_wrapper" class="input_wrapper">
-  <input id="from_box" class="from_to_box" type="text" 
-  placeholder="FROM" name="from_box" maxlength="3" autocomplete="off" onkeyup="checkinput('from_box');" onclick="clearinput('from_box');"></input>
-  </div>
+	<div id="content_wrapper">
+  		<div id="input_form">
+  			<div id="from_wrapper" class="input_wrapper">
+  				<input id="from_box" class="from_to_box" type="text" placeholder="FROM" name="from_box" maxlength="3" autocomplete="off" onkeyup="checkinput('from_box');" onclick="clearinput('from_box');"></input>
+ 			 </div>
   
-  <div id="to_wrapper" class="input_wrapper">
-  <input id="to_box" class="from_to_box" type="text" 
-  placeholder="TO" name="to_box" maxlength="3" autocomplete="off" onkeyup="checkinput('to_box');" onclick="clearinput('to_box');"></input>  
-  </div>
-	</div>
+  			<div id="to_wrapper" class="input_wrapper">
+  				<input id="to_box" class="from_to_box" type="text" placeholder="TO" name="to_box" maxlength="3" autocomplete="off" onkeyup="checkinput('to_box');" onclick="clearinput('to_box');"></input>  
+ 			</div>
+ 		</div>
 	
-  <div id="warning_wrapper">
-  <div id="invalid_from_box" class="invalid_warning"><p>Invalid airport code</p></div>
-  <div id="invalid_to_box" class="invalid_warning"><p>Invalid airport code</p></div>
-  </div>
+  		<div id="warning_wrapper">
+  			<div id="invalid_from_box" class="invalid_warning"><p>Invalid airport code</p></div>
+  			<div id="invalid_to_box" class="invalid_warning"><p>Invalid airport code</p></div>
+  		</div>
   
-
-<div id="distance_wrapper">
-  <div id="distance_display"></div>
-</div>
-  
-  </div>
+		<div id="distance_wrapper">
+ 			 <div id="distance_display"></div>
+		</div>  
+	</div>
   </body>
 </html>

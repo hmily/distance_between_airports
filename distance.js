@@ -6,8 +6,8 @@ var to_text = "";
 
 function clickicon(airport) {
 
-	//toggleicon(airport);
-
+	brightenbackground();
+	
 	var from_form = document.getElementById("from_box");
 	var to_form = document.getElementById("to_box");
 
@@ -48,12 +48,10 @@ function clickicon(airport) {
 	to_form.value = to_text;
 	from_text = from_text.toUpperCase();
 	to_text = to_text.toUpperCase();
-
 	displayairportdistance()
 }
 
 function checkinput(box) {
-	//turnofficon(from_text);
 	var input_box = document.getElementById(box);
 	var text = input_box.value;
 	if (text.length == 3) {
@@ -108,19 +106,31 @@ function clearinput(box) {
 		isfilled_to = 0;
 		displayairportdistance();
 	}
+	brightenbackground();
 }
 
 function displayairportdistance() {
 	if (isfilled_from && isfilled_to) {
 		var distance = IntentMedia.Distances.distance_between_airports(from_text, to_text);
-		if (distance > 0) {
+		if (distance >= 0) {
 			var miles = document.createElement('div');
 			miles.setAttribute("id", "miles");
 			miles.innerHTML = "miles";
 			document.getElementById("distance_display").innerHTML = distance;
 			document.getElementById("distance_display").appendChild(miles);
+			dimbackground();
 		} else document.getElementById("distance_display").innerHTML = "";
 	} else document.getElementById("distance_display").innerHTML = "";
+}
+
+function brightenbackground() {
+	document.getElementById("map").style.opacity = 1.0;
+	document.getElementById("background").style.visibility = "visible";
+}
+
+function dimbackground() {
+	document.getElementById("map").style.opacity = 0.6;
+	document.getElementById("background").style.visibility = "hidden";
 }
 
 function turnofficons()	{
