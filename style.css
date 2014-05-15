@@ -28,7 +28,7 @@ body {
 	color: #fff;
 	opacity: 0.4;
 	text-align: center;
-		z-index: -1;
+	z-index: -1;
 }
 
 #content_wrapper {
@@ -86,51 +86,51 @@ body {
 }
 
 #jfk_pdx{
-	width: 56%;
+	width: 790px;
 }
 
 #pdx_jfk {
-	width: 56%;
+	width: 790px;
 }
 
 #jfk_lax{
-	width: 55%;
+	width: 775px;
 }
 
 #lax_jfk {
-	width: 55%;
+	width: 775px;
 }
 
 #jfk_las {
-	width: 50%;
+	width: 700px;
 }
 
 #las_jfk {
-	width: 50%;
+	width: 700px;
 }
 
 #lax_pdx {
-	width: 2.3%;
+	width: 32px;
 }
 
 #pdx_lax {
-	width: 2.3%;
+	width: 32px;
 }
 
 #las_lax {
-	width: 5%;
+	width: 70px;
 }
 
 #lax_las {
-	width: 5%;
+	width: 70px;
 }
 
 #las_pdx {
-	width: 6%;
+	width: 85px;
 }
 
 #pdx_las {
-	width: 6%;
+	width: 85px;
 }
 
 #input_form {
