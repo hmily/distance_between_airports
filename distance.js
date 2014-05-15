@@ -4,6 +4,17 @@ var jfk_cl = las_cl = lax_cl = pdx_cl = 0;
 var from_text = "";
 var to_text = "";
 
+/* function cleardata() {
+	turnofficon(from_text);
+	turnofficon(to_text);
+	from_text = "";
+	to_text = "";
+	document.getElementById("from_box").value = "";
+	document.getElementById("to_box").value = "";
+	document.getElementById("distance_display").innerHTML = "";
+	brightenbackground();
+} didn't end up using */
+
 function clickicon(airport) {
 
 	brightenbackground();

@@ -32,7 +32,7 @@ body {
 
 #content_wrapper {
 	width: 400px;
-	height: 500px;
+	height: 300px;
 	position: absolute;
 	top: 200px;
 	left:520px;
@@ -63,7 +63,7 @@ body {
 	background: white;
 	border: 2px solid #333333;
 	border-radius: 10px;
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
 .input_wrapper {
@@ -120,7 +120,7 @@ body {
 #distance_display {
 	width: 100%;
 	text-align: center;
-	font-size: 160pt;
+	font-size: 140pt;
 	position: absolute;
 }
 
@@ -227,7 +227,7 @@ input:-ms-input-placeholder {
 	left: 390px;
 }
 
-#lax_icon:hover #las_text {
+#lax_icon:hover #lax_text {
 	visibility: visible;
 }
 
@@ -237,7 +237,7 @@ input:-ms-input-placeholder {
 	left: 440px;
 }
 
-#las_icon:hover #lax_text {
+#las_icon:hover #las_text {
 	visibility: visible;
 }
 
