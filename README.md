@@ -19,6 +19,7 @@ Browser Compatibility:
 Future Improvements:
 	Lines can be drawn between selected airports.
 	Animation can be implemented on distance display - i.e rolling number.
+	Code decomposition can be cleaner.
 
 Scalability:
 	More airport can be easily added to the map and database.
