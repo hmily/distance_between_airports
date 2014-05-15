@@ -14,7 +14,7 @@ Style:
 	
 Browser Compatibility:
 	Best viewing in Firefox.
-	Fonts not rendering perfectly in Chrome or Safari.
+	Fonts not rendering perfectly in Chrome or Safari (use screenshot as reference).
 	
 Future Improvements:
 	Lines can be drawn between selected airports.
