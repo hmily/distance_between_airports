@@ -28,6 +28,7 @@ body {
 	color: #fff;
 	opacity: 0.4;
 	text-align: center;
+		z-index: -1;
 }
 
 #content_wrapper {
@@ -213,8 +214,8 @@ input:-ms-input-placeholder {
 
 #jfk_icon {
 	position: absolute;
-	top: 350px;
-	left: 1100px;
+	top: 370px;
+	left: 1080px;
 }
 
 #jfk_icon:hover #jfk_text {
@@ -223,8 +224,8 @@ input:-ms-input-placeholder {
 
 #lax_icon {
 	position: absolute;
-	top: 570px;
-	left: 390px;
+	top: 525px;
+	left: 310px;
 }
 
 #lax_icon:hover #lax_text {
@@ -234,7 +235,7 @@ input:-ms-input-placeholder {
 #las_icon {
 	position: absolute;
 	top: 500px;
-	left: 440px;
+	left: 380px;
 }
 
 #las_icon:hover #las_text {
@@ -243,8 +244,8 @@ input:-ms-input-placeholder {
 
 #pdx_icon {
 	position: absolute;
-	top: 300px;
-	left: 280px;
+	top: 250px;
+	left: 300px;
 }
 
 #pdx_icon:hover #pdx_text {
