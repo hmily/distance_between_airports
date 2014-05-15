@@ -105,6 +105,8 @@ function checkinput(box) {
 }
 
 function clearinput(box) {
+	turnoffpath();
+	brightenbackground();
 	document.getElementById(box).value = "";
 	document.getElementById("invalid_" + box).style.visibility = "hidden";
 	if (box === "from_box") {
@@ -118,8 +120,6 @@ function clearinput(box) {
 		isfilled_to = 0;
 		displayairportdistance();
 	}
-	brightenbackground();
-	turnoffpath();
 }
 
 function displayairportdistance() {
