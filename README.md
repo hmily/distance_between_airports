@@ -8,6 +8,6 @@ Style: - Hovering over icons displays airport code. - Background dims when displ
 
 Browser Compatibility: - Best viewing in Firefox. - Fonts not rendering perfectly in Chrome or Safari (use screenshot as reference).
 
-Future Improvements: - Lines can be drawn between selected airports. - Animations can be implemented on distance display - i.e rolling numbers, smooth dimming of the background, expanding paths, etc. - Code decomposition can be cleaner. - Clear data on clicking.
+Future Improvements: - Lines can be drawn between selected airports. - Animations can be implemented on distance display - i.e rolling numbers, smooth dimming of the background, expanding paths, etc. - Be able to click off icons. - Code decomposition can be cleaner. - Clear data on clicking.
 
 Scalability: - More airports can be easily added to the map and database.
