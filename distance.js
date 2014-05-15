@@ -168,8 +168,8 @@ function dimbackground() {
 }
 
 function turnofficons()	{
-	turnofficon(document.getElementById("from_box").value);
-	turnofficon(document.getElementById("to_box").value);
+		turnofficon(document.getElementById("from_box").value);
+		turnofficon(document.getElementById("to_box").value);
 }
 
 function toggleicon(airport) {
@@ -229,13 +229,15 @@ function turnonicon(airport_code) {
 }
 
 function turnofficon(airport_code) {
-	var icon, text;
-	airport_code = airport_code.toLowerCase();
-	icon = document.getElementById(airport_code + "_icon");
-	text = document.getElementById(airport_code + "_text");
-	icon.style.width = "25px";
-	icon.style.height = "25px";
-	icon.style.opacity = 0.6;
-	icon.style.backgroundColor = "#1d626c";
-	text.style.visibility = "hidden";
+	if (from_text != to_text) {
+		var icon, text;
+		airport_code = airport_code.toLowerCase();
+		icon = document.getElementById(airport_code + "_icon");
+		text = document.getElementById(airport_code + "_text");
+		icon.style.width = "25px";
+		icon.style.height = "25px";
+		icon.style.opacity = 0.6;
+		icon.style.backgroundColor = "#1d626c";
+		text.style.visibility = "hidden";
+	}
 }
