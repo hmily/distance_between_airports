@@ -4,10 +4,10 @@ Input: - There are two ways to input airport code - enter text in the text field
 
 Validation: - Invalid airport codes are detected and noted.
 
-Style: - Hovering over icons displays airport code. - Background dims when displaying distance.
+Style: - Hovering over icons displays airport code. - Background dims when displaying distance. - Paths shown with distance.
 
 Browser Compatibility: - Best viewing in Firefox. - Fonts not rendering perfectly in Chrome or Safari (use screenshot as reference).
 
-Future Improvements: - Lines can be drawn between selected airports. - Animations can be implemented on distance display - i.e rolling numbers, smooth dimming of the background, etc. - Code decomposition can be cleaner. - Clear data on clicking.
+Future Improvements: - Lines can be drawn between selected airports. - Animations can be implemented on distance display - i.e rolling numbers, smooth dimming of the background, expanding paths, etc. - Code decomposition can be cleaner. - Clear data on clicking.
 
 Scalability: - More airports can be easily added to the map and database.

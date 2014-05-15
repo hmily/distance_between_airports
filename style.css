@@ -40,17 +40,97 @@ body {
 }
 
 #path_wrapper {
-		position:absolute;
-	top:0;
-	left: 520;
-	float: left;
-	z-index: 2;
+	position:relative;
+	top:-45px;
+	left: 300px;
+	max-height: 650px;
+	max-width: 100%;
 }
 
 .paths {
 	position:absolute;
-	top:0;
-	z-index: 2;
+	left: 0px;
+	top: 0px;
+	visibility: hidden;
+}
+
+#jfk_pdx_wrapper {
+
+}
+
+#jfk_lax_wrapper {
+	position:relative;
+	top: 120px;
+	left: 10px;
+}
+
+#jfk_las_wrapper {
+	position:relative;
+	top: 125px;
+	left: 80px;
+}
+
+#lax_pdx_wrapper {
+	position: relative;
+	left: -12px;
+}
+
+#las_lax_wrapper {
+	position: relative;
+	top: 255px;
+	left: 15px;
+}
+
+#las_pdx_wrapper {
+
+}
+
+#jfk_pdx{
+	width: 56%;
+}
+
+#pdx_jfk {
+	width: 56%;
+}
+
+#jfk_lax{
+	width: 55%;
+}
+
+#lax_jfk {
+	width: 55%;
+}
+
+#jfk_las {
+	width: 50%;
+}
+
+#las_jfk {
+	width: 50%;
+}
+
+#lax_pdx {
+	width: 2.3%;
+}
+
+#pdx_lax {
+	width: 2.3%;
+}
+
+#las_lax {
+	width: 5%;
+}
+
+#lax_las {
+	width: 5%;
+}
+
+#las_pdx {
+	width: 6%;
+}
+
+#pdx_las {
+	width: 6%;
 }
 
 #input_form {

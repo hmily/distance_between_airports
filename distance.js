@@ -18,6 +18,7 @@ var to_text = "";
 function clickicon(airport) {
 
 	brightenbackground();
+	turnoffpath();
 	
 	var from_form = document.getElementById("from_box");
 	var to_form = document.getElementById("to_box");
@@ -118,6 +119,7 @@ function clearinput(box) {
 		displayairportdistance();
 	}
 	brightenbackground();
+	turnoffpath();
 }
 
 function displayairportdistance() {
@@ -129,9 +131,24 @@ function displayairportdistance() {
 			miles.innerHTML = "miles";
 			document.getElementById("distance_display").innerHTML = distance;
 			document.getElementById("distance_display").appendChild(miles);
+			turnonpath();
 			dimbackground();
 		} else document.getElementById("distance_display").innerHTML = "";
 	} else document.getElementById("distance_display").innerHTML = "";
+}
+
+function turnonpath() {
+	var path_id = from_text + "_" + to_text;
+	path_id = path_id.toLowerCase();
+	document.getElementById(path_id).style.visibility = "visible";
+}
+
+function turnoffpath() {
+	if (from_text != "" && to_text != "") {
+		var path_id = from_text + "_" + to_text;
+		path_id = path_id.toLowerCase();
+		document.getElementById(path_id).style.visibility = "hidden";
+	}
 }
 
 function brightenbackground() {
